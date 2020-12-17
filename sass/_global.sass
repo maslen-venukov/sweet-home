@@ -1,0 +1,80 @@
+$gold: #eec962
+$blue: #172540
+
+html,
+body
+  font-family: 'Montserrat', sans-serif
+  font-size: 18px
+  line-height: 1.2
+  color: $blue
+  overflow-x: hidden
+
+.lock
+  overflow: hidden
+
+.container
+  width: 100%
+  max-width: 1210px
+  padding: 0 15px
+  margin: 0 auto
+
+.btn
+  position: relative
+  display: inline-block
+  height: 65px
+  font-size: 24px
+  color: $blue
+  line-height: 65px
+  padding: 0 105px 0 50px
+  border-radius: 50px
+  background-color: $gold
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    right: 50px
+    transform: translateY(calc(-50% + 1px))
+    width: 45px
+    height: 12px
+    background: url(../img/icons/arrow-right.svg) center / cover no-repeat
+  &--blue
+    display: block
+    width: 275px
+    margin: 0 auto
+    color: $gold
+    background-color: $blue
+    &::after
+      background: url(../img/icons/gold-arrow-right.svg) center / cover no-repeat
+
+.section
+  &:not(:last-child)
+    margin-bottom: 100px
+  &__title
+    font-size: 48px
+    color: $blue
+    margin-bottom: 40px
+    span
+      color: $gold
+  &--bg
+    padding: 40px 0 60px
+    background: url(../img/section-bg.jpg) center / cover no-repeat
+    .section__title
+      color: $gold
+
+.input
+  height: 40px
+
+.input,
+.textarea
+  color: $gold
+  border: 1px solid $gold
+  border-radius: 10px
+  background-color: transparent
+  padding: 15px
+  &::placeholder
+    color: rgba($gold, .5)
+  &--blue
+    color: $blue
+    border-color: $blue
+    &::placeholder
+      color: rgba($blue, .5)

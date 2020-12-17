@@ -28,6 +28,7 @@ body
   padding: 0 105px 0 50px
   border-radius: 50px
   background-color: $gold
+  transition: box-shadow .2s
   &::after
     content: ''
     position: absolute
@@ -37,6 +38,13 @@ body
     width: 45px
     height: 12px
     background: url(../img/icons/arrow-right.svg) center / cover no-repeat
+    transition: transform .2s
+  &:focus,
+  &:hover
+    &::after
+      transform: translate(10px, calc(-50% + 1px))
+  &:focus
+    box-shadow: 0 3px 15px rgba($gold, .5)
   &--blue
     display: block
     width: 275px
@@ -71,6 +79,9 @@ body
   border-radius: 10px
   background-color: transparent
   padding: 15px
+  transition: box-shadow .2s
+  &:focus
+    box-shadow: 0 3px 15px rgba($gold, .5)
   &::placeholder
     color: rgba($gold, .5)
   &--blue

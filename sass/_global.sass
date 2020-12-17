@@ -41,10 +41,9 @@ body
     transition: transform .2s
   &:focus,
   &:hover
+    box-shadow: 0 3px 15px rgba($gold, .5)
     &::after
       transform: translate(10px, calc(-50% + 1px))
-  &:focus
-    box-shadow: 0 3px 15px rgba($gold, .5)
   &--blue
     display: block
     width: 275px
@@ -55,8 +54,7 @@ body
       background: url(../img/icons/gold-arrow-right.svg) center / cover no-repeat
 
 .section
-  &:not(:last-child)
-    margin-bottom: 100px
+  margin-bottom: 100px
   &__title
     font-size: 48px
     color: $blue
